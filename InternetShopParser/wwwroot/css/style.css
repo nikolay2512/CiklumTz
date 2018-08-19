@@ -1,0 +1,261 @@
+﻿body {
+    margin: 0;
+}
+
+/* Set padding to keep content from hitting the edges */
+
+.inner {
+    max-width: 1200px;
+    width: calc(100% - 30px);
+    position: relative;
+    margin: 0 auto !important;
+    background: #fff;
+}
+
+.container {
+    max-width: 460px;
+    width: 100%;
+    margin: auto;
+    margin-top: 10%;
+    min-height: 300px; 
+}
+
+.container p {
+    text-align: center;
+    color: #7C0644;
+    font-size: 20px;
+}
+
+h1 {
+    font-size: 30px;
+    font-weight: 300;
+    line-height: 42px;
+    color: #7C0644;
+    margin-top: 0;
+}
+
+.header {
+    width: 100%;
+    height: 50px;
+    background-color: #eaeaea !important;
+    min-height: 50px !important;
+    line-height: 50px;
+    position: relative;
+}
+
+.header .inner {
+    background-color: #eaeaea !important;
+}
+
+menu {
+    padding: 0;
+    margin: 0;
+}
+
+menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+menu ul li {
+    display: inline-block;
+    padding-right: 30px;
+}
+
+menu a {
+    color: #7c0644;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all .6s;
+}
+menu a:hover {
+    color: #5f0534;
+    text-decoration: underline;
+}
+.ui-content {
+    padding: 30px 0 0;
+}
+
+.page.ui-page-theme-a {
+    position: relative !important;
+    width: 100%;
+    background: #fff;
+}
+
+
+#Login {
+    display: block !important;
+}
+
+.logout {
+    min-height:50px;
+    line-height: 50px;
+}
+
+#aLogout {
+    color: #7C0644;
+    text-decoration: none;
+    font-size: 25px;
+}
+
+#Logout {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+/* ------------------All.cshtml---------------- */
+.tableNews {
+    width: 100%;
+}
+.aArticleRemove {
+    cursor: pointer;
+    font-size: 25px !important;
+    color: #7C0644 !important;
+}
+.ui-page-theme-a .ui-btn {
+    background: #7C0644;
+    color: #fff;
+    transition: background .6s;
+}
+
+.ui-page-theme-a .ui-btn:hover {
+    background: #5f0534;
+    color: #fff;
+}
+
+.ui-page-theme-a .ui-focus {
+    box-shadow: none;
+}
+
+.ui-input-btn input {
+    color: #fff;
+    font-weight: 300;
+    opacity: 1;
+}
+
+.ui-input-text {
+    margin: 2em 0;
+}
+
+/* ------------------ Article.cshtml ---------------- */
+.row {
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.wrapper--button {
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    max-width: 100%;
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+/* ------------------ End Article.cshtml ---------------- */
+
+.addNewsUrl_div a {
+    text-decoration: none;
+}
+
+#pagination_context {
+    max-width: 200px;
+    margin: 0 auto;
+    display: none;
+}
+
+.pagination_child {
+    width: calc(100% - 100px);
+    display: inline-block;
+    text-align: center;
+    line-height: 70px;
+    visibility: hidden;
+    vertical-align: bottom;
+}
+
+.pagination_child_btn {
+    width: 45px;
+    display: inline-block;
+    visibility: hidden;
+}
+
+#tableArticle_div {
+    width: 100%;
+    min-height: 260px;
+}
+table {
+    border-spacing: 0;
+    margin: 20px 0;
+    border-collapse: collapse;
+}
+
+tr {
+    border-bottom: 1px solid #7C0644;
+}
+
+td {
+    padding: 10px 15px;
+}
+
+@media all and (max-width: 720px) {
+    table, tbody, tr, td {
+        display: block;
+    }
+
+    td {
+        padding: 7px 0;
+    }
+}
+ 
+/* ------------------End All.cshtml---------------- */
+/* ----------- ArticlePreview.cshtml -------------- */
+.phone-view {
+    border: 7px solid black;
+    border-top: 30px solid black;
+    border-bottom: 60px solid black;
+    border-radius: 20px;
+    max-width: 250px;
+    margin: 0 auto 30px;
+    height: 430px;
+    overflow-y: scroll;
+}
+
+.phone-view img {
+    width: 100%;
+}
+
+#newsHtml {
+    min-height: calc(100% - 90px);
+}
+/* -------- End ArticlePreview.cshtml ------------- */
+
+html .addNewsUrl_div .ui-link {
+    color: #7C0644;
+    text-decoration: underline;
+    font-size: 20px;
+    transition: color .6s;
+}
+
+html .addNewsUrl_div .ui-link:hover {
+    color: #5f0534;
+}
+
+
+/*--------Plugen html editor---------*/
+.fr-popup .fr-checkbox-line label
+{
+    margin: -9px 10% !important;
+}
+
+.fr-wrapper > div > a {
+    display: none !important;
+}
+/*-----------------------------------*/
