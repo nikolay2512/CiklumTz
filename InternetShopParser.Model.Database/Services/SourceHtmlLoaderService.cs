@@ -6,23 +6,25 @@ using InternetShopParser.Model.Services;
 
 namespace InternetShopParser.Model.Database.Services
 {
-    public class HtmlLoaderService : BaseService
+    public class SourceHtmlLoaderService : BaseService, ISourceHtmlLoaderService
     {
         private readonly IStoreParserProvider _storeParserProvider;
         private readonly WebClient _webClient;
 
-        public HtmlLoaderService(IStoreParserProvider storeParserProvider, WebClient webClient)
+        public SourceHtmlLoaderService(IStoreParserProvider storeParserProvider, WebClient webClient)
         {
             _storeParserProvider = storeParserProvider;
             _webClient = webClient;
         }
 
-        public async Task<AOResult<IHtmlDocument>> GetSourcePage(int pageNumber)
-        => BaseInvoke<string>((aoResult) =>
-        { 
-            string source = _webClient.DownloadString($"{_storeParserProvider.GetStoreUrl()}{_storeParserProvider.GetPagePrefix(pageNumber)}/");
+        public async Task<AOResult<string>> GetSourcePageAsync(int pageNumber)
+        => await BaseInvokeAsync<string>(async(aoResult) =>
+        {
+            Uri pageUri = new Uri($"{_storeParserProvider.GetStoreUrl(pageNumber)}");
+            string source = await _webClient.DownloadStringTaskAsync(pageUri);
             aoResult.SetSuccess(source);
         });
+
 
     }
 }

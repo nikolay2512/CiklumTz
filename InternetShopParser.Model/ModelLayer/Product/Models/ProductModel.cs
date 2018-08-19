@@ -3,8 +3,9 @@ namespace InternetShopParser.Model.ModelLayer.Product.Models
 {
     public class ProductModel
     {
-        public ProductModel()
-        {
-        }
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public decimal Price { get; set; }
+        public string Currency { get; set; }
     }
 }

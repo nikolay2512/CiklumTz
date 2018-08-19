@@ -1,7 +1,8 @@
 ﻿using System;
 namespace InternetShopParser.Model.Constants
 {
-    public struct ReqularErxpressionConstants
+    public static class ReqularErxpressionConstants
     {
+        public const string SelectInvisibleSpace = @"\p{Z}";
     }
 }

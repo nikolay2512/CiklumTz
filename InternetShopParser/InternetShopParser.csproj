@@ -6,10 +6,41 @@
 
   <ItemGroup>
     <Folder Include="wwwroot\" />
+    <Folder Include="ApiController\" />
+    <Folder Include="Attributes\" />
+    <Folder Include="Views\" />
+    <Folder Include="Views\Product\" />
+    <Folder Include="Views\Shared\" />
+    <Folder Include="wwwroot\css\" />
+    <Folder Include="wwwroot\js\" />
+    <Folder Include="wwwroot\js\Product\" />
+    <Folder Include="wwwroot\js\jQuery\" />
+    <Folder Include="wwwroot\js\PageLoad\" />
+    <Folder Include="wwwroot\js\jqnotification\" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.1.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="3.0.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="3.0.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="3.0.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="3.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning" Version="2.3.0" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="2.1.1.1" />
+    <PackageReference Include="AutoMapper" Version="7.0.1" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="5.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="2.0.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="2.0.0" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\InternetShopParser.Model.Database\InternetShopParser.Model.Database.csproj" />
+    <ProjectReference Include="..\InternetShopParser.View\InternetShopParser.View.csproj" />
+    <ProjectReference Include="..\InternetShopParser.View.Response\InternetShopParser.View.Response.csproj" />
+  </ItemGroup>
+  
 </Project>

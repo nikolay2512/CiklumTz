@@ -47,31 +47,6 @@ h1 {
     background-color: #eaeaea !important;
 }
 
-menu {
-    padding: 0;
-    margin: 0;
-}
-
-menu ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-menu ul li {
-    display: inline-block;
-    padding-right: 30px;
-}
-
-menu a {
-    color: #7c0644;
-    text-transform: uppercase;
-    text-decoration: none;
-    transition: all .6s;
-}
-menu a:hover {
-    color: #5f0534;
-    text-decoration: underline;
-}
 .ui-content {
     padding: 30px 0 0;
 }
@@ -83,34 +58,10 @@ menu a:hover {
 }
 
 
-#Login {
-    display: block !important;
-}
 
-.logout {
-    min-height:50px;
-    line-height: 50px;
-}
-
-#aLogout {
-    color: #7C0644;
-    text-decoration: none;
-    font-size: 25px;
-}
-
-#Logout {
-    position: absolute;
-    top: 0;
-    right: 0;
-}
-/* ------------------All.cshtml---------------- */
-.tableNews {
+/* ------------------ProductList.cshtml---------------- */
+.tableProducts {
     width: 100%;
-}
-.aArticleRemove {
-    cursor: pointer;
-    font-size: 25px !important;
-    color: #7C0644 !important;
 }
 .ui-page-theme-a .ui-btn {
     background: #7C0644;
@@ -137,7 +88,7 @@ menu a:hover {
     margin: 2em 0;
 }
 
-/* ------------------ Article.cshtml ---------------- */
+
 .row {
     display: flex;
     -ms-flex-wrap: wrap;
@@ -160,7 +111,7 @@ menu a:hover {
     padding-left: 15px;
 }
 
-/* ------------------ End Article.cshtml ---------------- */
+/* ------------------ End ProductList.cshtml ---------------- */
 
 .addNewsUrl_div a {
     text-decoration: none;
@@ -187,10 +138,6 @@ menu a:hover {
     visibility: hidden;
 }
 
-#tableArticle_div {
-    width: 100%;
-    min-height: 260px;
-}
 table {
     border-spacing: 0;
     margin: 20px 0;
@@ -201,8 +148,14 @@ tr {
     border-bottom: 1px solid #7C0644;
 }
 
+th {
+    padding: 10px 15px;
+    text-align: left;
+}
+
 td {
     padding: 10px 15px;
+    text-align: left;
 }
 
 @media all and (max-width: 720px) {
@@ -215,27 +168,10 @@ td {
     }
 }
  
-/* ------------------End All.cshtml---------------- */
-/* ----------- ArticlePreview.cshtml -------------- */
-.phone-view {
-    border: 7px solid black;
-    border-top: 30px solid black;
-    border-bottom: 60px solid black;
-    border-radius: 20px;
-    max-width: 250px;
-    margin: 0 auto 30px;
-    height: 430px;
-    overflow-y: scroll;
-}
-
-.phone-view img {
-    width: 100%;
-}
 
 #newsHtml {
     min-height: calc(100% - 90px);
 }
-/* -------- End ArticlePreview.cshtml ------------- */
 
 html .addNewsUrl_div .ui-link {
     color: #7C0644;
@@ -249,13 +185,7 @@ html .addNewsUrl_div .ui-link:hover {
 }
 
 
-/*--------Plugen html editor---------*/
-.fr-popup .fr-checkbox-line label
-{
-    margin: -9px 10% !important;
+.historyUpdatePriceTitle {
+    margin: 40px auto;
+    text-align: center;
 }
-
-.fr-wrapper > div > a {
-    display: none !important;
-}
-/*-----------------------------------*/

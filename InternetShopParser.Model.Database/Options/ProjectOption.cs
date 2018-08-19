@@ -1,7 +1,7 @@
 ﻿using System;
 namespace InternetShopParser.Model.Database.Options
 {
-    public class ProjectOptions
+    public class ProjectOption
     {
         public string ProjectUrl { get; set; }
     }

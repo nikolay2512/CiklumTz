@@ -4,4 +4,11 @@
     <TargetFramework>netcoreapp2.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\InternetShopParser.Model\InternetShopParser.Model.csproj" />
+    <ProjectReference Include="..\InternetShopParser.View\InternetShopParser.View.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="7.0.1" />
+  </ItemGroup>
 </Project>

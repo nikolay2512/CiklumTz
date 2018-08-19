@@ -1,5 +1,22 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@page
 @{
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
+
+
+<div data-role="page" class="page" id="CurrentProduct" data-dom-cache="false">
+    <div role="main" class="ui-content addAdvertContent">
+        <div id="product"></div>
+        <h1 class="historyUpdatePriceTitle">История обновления цен подукта</h1>
+        <div id="table_div"></div>
+        <div id="pagination_prices">
+            <div class="pagination_child_btn" id="prices_preview_div" hidden>
+                <input type="button" value="<" onclick="productPage.Preview()" id="preview_prices" />
+            </div>
+            <div id="count_prices" class="pagination_child"></div>
+            <div class="pagination_child_btn" id="prices_next_div">
+                <input type="button" value=">" onclick="productPage.Next()" id="next_prices" />
+            </div>
+        </div>
+    </div>
+</div>

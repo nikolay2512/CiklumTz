@@ -1,12 +1,27 @@
 ﻿<!DOCTYPE html>
 
 <html>
-    <head>
-        <meta name="viewport" content="width=device-width" />
-        <title>@ViewBag.Title</title>
-    </head>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+
+    <link rel="stylesheet" href="~/css/jquery.mobile-1.4.5.min.css" />
+    <link rel="stylesheet" href="~/css/style.css" />
+
+
+    <script src="~/js/jQuery/jquery-2.2.4.min.js"></script>
+    <script src="~/js/jQuery/jquery.mobile-1.4.5.min.js"></script>
+    <script src="~/js/PageLoad/hp-load-page.js"></script>
+    <script src="~/js/jQuery/general.js"></script>
+    <script src="~/js/jqnotification/jquery.mobile.toast.min.js"></script>
+    <script src="~/js/Product/ProductView.js"></script>
+    <script src="~/js/Product/ProductListView.js"></script>
+
+
+</head>
     <body>
-        <div>
+        @{ Html.RenderPartial("Header"); }
+        <div class="inner">
             @RenderBody()
         </div>
     </body>

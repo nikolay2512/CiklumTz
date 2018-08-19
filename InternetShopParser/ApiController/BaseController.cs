@@ -1,7 +1,10 @@
 ﻿using System;
+using Microsoft.AspNetCore.Mvc;
+
 namespace InternetShopParser.ApiController
 {
-    public class BaseController
+    [Route("v{version:apiVersion}/[controller]")]
+    public abstract class BaseController : Controller
     {
         public BaseController()
         {

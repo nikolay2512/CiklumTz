@@ -3,8 +3,6 @@ namespace InternetShopParser.View.Models
 {
     public class TableView
     {
-        public TableView()
-        {
-        }
+        public int TotalCount { get; set; }
     }
 }

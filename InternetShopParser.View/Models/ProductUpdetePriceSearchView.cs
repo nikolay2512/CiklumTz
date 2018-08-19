@@ -1,10 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
+
 namespace InternetShopParser.View.Models
 {
-    public class ProductUpdetePriceSearchView
+    public class ProductUpdetePriceSearchView : TableView
     {
-        public ProductUpdetePriceSearchView()
-        {
-        }
+        public IEnumerable<ProductUpdetePriceView> ProductUpdetePrices { get; set; }
     }
 }

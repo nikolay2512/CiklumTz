@@ -4,4 +4,15 @@
     <TargetFramework>netcoreapp2.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Services\" />
+    <Folder Include="CustomExceptions\" />
+    <Folder Include="Attributes\" />
+    <Folder Include="ModelLayer\" />
+    <Folder Include="ModelLayer\Product\" />
+    <Folder Include="ModelLayer\Product\Models\" />
+    <Folder Include="Constants\" />
+    <Folder Include="ModelLayer\ProductUpdetePrice\" />
+    <Folder Include="ModelLayer\ProductUpdetePrice\Models\" />
+  </ItemGroup>
 </Project>

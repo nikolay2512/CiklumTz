@@ -1,7 +1,8 @@
 ﻿using System;
 namespace InternetShopParser.Model.ModelLayer
 {
-    public struct TableModel
+    public class TableModel
     {
+        public int TotalCount { get; set; }
     }
 }

@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using AutoMapper;
 using InternetShopParser.Model;
+using InternetShopParser.Model.ModelLayer.Product.Models;
+using InternetShopParser.Model.ModelLayer.ProductUpdetePrice.Models;
+using InternetShopParser.View.Models;
 
 namespace InternetShopParser.View.Response
 {
@@ -17,6 +20,14 @@ namespace InternetShopParser.View.Response
         public ServerResponse<object> Map(AOResult<object> aoResult)
         => AoResultToServerResponse<object, object>(aoResult);
 
+        public ServerResponse<ProductSearchView> Map(AOResult<ProductSearchModel> aoResult)
+        => AoResultToServerResponse<ProductSearchModel, ProductSearchView>(aoResult);
+
+        public ServerResponse<ProductFullView> Map(AOResult<ProductFullModel> aoResult)
+        => AoResultToServerResponse<ProductFullModel, ProductFullView>(aoResult);
+
+        public ServerResponse<ProductUpdetePriceSearchView> Map(AOResult<ProductUpdetePriceSearchModel> aoResult)
+        => AoResultToServerResponse<ProductUpdetePriceSearchModel, ProductUpdetePriceSearchView>(aoResult);
         #region  IViewMapper implementation
 
         #endregion
