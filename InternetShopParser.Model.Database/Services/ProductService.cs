@@ -68,7 +68,6 @@ namespace InternetShopParser.Model.Database.Services
         {
             List<Error> errorList = new List<Error>();
             Product product = _dbContext.Products
-                                        .Include(x=>x.ProductUpdetePrices)
                                         .FirstOrDefault(x => x.Id == id);
 
             if (product == null)
