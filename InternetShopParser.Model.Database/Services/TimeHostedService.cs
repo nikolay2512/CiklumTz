@@ -17,7 +17,6 @@ namespace InternetShopParser.Model.Database.Services
     {
         private Timer _timer;
         private const int Interval = 30000;
-        private int i = 0;
 
         private IHtmlParserService _htmlParserService;
         private IDateTimeProvider _dateTimeProvider;
@@ -57,17 +56,16 @@ namespace InternetShopParser.Model.Database.Services
                         var product = productList.FirstOrDefault(x => x.Name.Contains(productModel.Name));
                         if (product != null && product.Price != productModel.Price)
                         {
-                            product.Price = product.Price+i;
+                            product.Price = productModel.Price;
                             _dbContext.ProductUpdetePrices.Add(new ProductUpdetePrice()
                             {
-                                DateUpdate = _dateTimeProvider.UtcNow.AddDays(i),
+                                DateUpdate = _dateTimeProvider.UtcNow,
                                 PriceUpdate = product.Price,
                                 Product = product
                             });
                         }
                     }
                     _dbContext.SaveChanges();
-                    i += 1;
                 }
             }
         });

@@ -2,7 +2,7 @@
     ProductView: function (inputParams) {
         this.ViewName = inputParams.viewName;
         this.ViewInstanceVariableName = inputParams.viewInstanceVariableName;
-        this.ControllerName = 'Product';
+        this.ControllerName = 'ProductApi';
         this.PageId = inputParams.pageId;
         this.Skip = 0;
         this.Take = 10;

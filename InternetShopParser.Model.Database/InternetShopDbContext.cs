@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace InternetShopParser.Model.Database
 {
-    public class InternetShopDbContext : DbContext, IDisposable
+    public class InternetShopDbContext : DbContext
     {
         public InternetShopDbContext(DbContextOptions<InternetShopDbContext> options)
             : base(options)
