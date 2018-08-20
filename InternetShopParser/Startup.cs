@@ -50,8 +50,11 @@ namespace InternetShopParser
                 options.AssumeDefaultVersionWhenUnspecified = true;
                 options.DefaultApiVersion = new ApiVersion(1, 0);
             });
-
+#if !TEST
             var connectionString = Configuration.GetConnectionString("InternetShopContext");
+#else
+            var connectionString = ConnectionStringStatic.ConnectionString;
+#endif
             services.AddEntityFrameworkNpgsql().AddDbContext<InternetShopDbContext>(options => options.UseNpgsql(connectionString));
 
             services.AddSwaggerGen(cw =>
@@ -76,13 +79,10 @@ namespace InternetShopParser
             services.AddTransient<IStoreParserProvider, StoreParserProvider>();
             services.AddTransient<IProjectInfoProvider, ProjectInfoProvider>();
             services.AddTransient<IViewMapper, ResponseViewMapper>();
-            //services.AddTransient<MicrosoftExtensions.IHostedService, TimeHostedService>();
-            //services.AddHostedService<TimeHostedService>();
             services.AddSingleton<MicrosoftExtensions.IHostedService, TimeHostedService>((s =>
             {
                 using (var scope = s.CreateScope())
                 {
-                    //var dbContext = scope.ServiceProvider.GetService<InternetShopDbContext>();
                     var htmlParserService = scope.ServiceProvider.GetService<IHtmlParserService>();
                     var dateTimeProvider = scope.ServiceProvider.GetService<IDateTimeProvider>();
                     return new TimeHostedService(connectionString, htmlParserService, dateTimeProvider);
@@ -120,10 +120,12 @@ namespace InternetShopParser
             }
 
             app.UseMvcWithDefaultRoute();
+#if !TEST
             app.UseMvc(routes =>
                        routes.MapRoute(
                            name: "default",
-                           template: "v{version:apiVersion}/{controller=Product}/{action=ProductList}"));
+                           template: "{controller=Product}/{action=ProductList}"));
+#endif
             app.UseSwagger();
             app.UseSwaggerUI(cw =>
             {

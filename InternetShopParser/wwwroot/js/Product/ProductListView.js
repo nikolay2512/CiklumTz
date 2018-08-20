@@ -3,7 +3,7 @@
         this.ViewName = inputParams.viewName;
         this.ViewInstanceVariableName = inputParams.viewInstanceVariableName;
         this.PageId = inputParams.pageId;
-        this.ControllerName = 'Product';
+        this.ControllerName = 'ProductApi';
         this.Skip = 0;
         this.Take = 10;
         this.CountProducts = 0;
@@ -97,7 +97,7 @@
                         var tdProductTitle = $('<td>');
 
                         var aTitle = $('<a>', {
-                            'href': '/v1/Product/Product?Id='+ item.id,
+                            'href': '/Product/Product?Id='+ item.id,
                             'id': 'aTitle'+item.id,
                             'text': item.name,
                             'css' : {
